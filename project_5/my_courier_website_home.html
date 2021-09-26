@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Courier - Home</title>
+        <script src="my_courier_website.js" defer></script>
+        <link rel="stylesheet" href="my_courier_website.css">
+        <style>
+            .background{
+                background-image:  
+                linear-gradient(
+                rgba(231, 222, 216, 0.562), 
+                rgba(231, 222, 216, 0.562)
+                ), 
+                url(images/boxes5.jpg)
+            }
+
+            h1{
+                text-align:center;
+                color: rgb(13,13,13);
+            }
+
+            .who-are-we{
+                margin-left: 15px;
+            }
+            
+            .who-are-we p{
+                width: 90%;
+                text-align: justify;
+            }
+
+            .who-are-we img{
+                display: block;
+                padding: 5px;
+                margin-bottom: 20px;
+                width: 90%;
+                border: 2px solid rgba(13, 13, 13, 0.726);
+            }
+
+            .service-header{
+                text-align: center;
+                font-weight: bold;
+                background-color: rgb(180,152,126);
+            }
+
+            .service{
+                background-color: rgba(180, 152, 126, 0.623);
+                border-bottom: 1px solid black;
+                border-top: 1px solid black;
+                padding: 10px;
+                margin: 15px;
+            }
+
+            .service p{
+                text-align: justify;
+            }
+
+            .service p img{
+                margin-top: 10px;
+                margin-bottom: 10px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 70%;
+            }
+
+            table{
+                margin-top: -15px;
+                margin-left: 15px;
+                width: 70%;
+                border: 3px solid rgb(205,192,184);
+            }
+
+            tr{
+                text-align: center;
+            }
+
+            th{
+                padding: 10px;
+                background-color: rgb(205,192,184);
+            }
+
+            td{
+                padding: 10px;
+                background-color: rgb(253, 252, 252);
+                border: 1px solid rgba(205, 192, 184, 0.300);
+            }
+        </style>
+    </head>
+    <body class="background">
+        <div class="navigation">
+            <a href="my_courier_website_home.html"><img src="images/my_courier_logo2.png" alt="company logo"/></a>
+            <nav>
+                <div class="icon-bar" onclick="Show()">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+                <span id="nav-menu"> 
+                    <a href="my_courier_website_home.html" target="_self" class="nav">HOME</a>
+                    <a href="my_courier_website_our_company.html" target="_self" class="nav">OUR COMPANY</a>
+                    <a href="my_courier_website_calculate_cost.html" target="_self" class="nav">CALCULATE COST</a>
+                    <a href="my_courier_website_blog.html" target="_self" class="nav">BLOG</a>
+                    <a href="my_courier_website_contact_us.html" target="_self" class="nav">CONTACT US</a>
+                </span>
+            </nav>
+        </div>
+        <div class="container">
+            <h1>Welcome to My Courier webpage</h1>
+            <header class="interface-name">Home</header>
+            <header class="section-name">Who Are We?</header>
+            <div  class="col-lg-6 col-md-12 col-md12">
+                <div class="who-are-we">
+                    <p>
+                        The story of My Courier, began almost 10 years ago, as a family business. How we evolved into a thousand-dollar company
+                            reflects the history of modern transportation, international commerce, logistics and financial 
+                        services. Today, My Courier is customer first, people led, innovation driven. It’s powered by more than 495,000 employees
+                        connecting more than 220 nations and territories across roads, rails, air, and ocean. Tomorrow, My Courier will continue
+                        to lead the industry and connect the world, with a commitment to quality service and environmental sustainability.
+                        This is our purpose. It’s the essence of our DNA – the foundation of our work. It reflects our desire to do
+                        what’s right, to serve others, and to improve the quality of life for people around the world. It’s not just what
+                        we do-- it’s why we do it. It guides every decision, every day. Simply put, it’s the reason we are here.
+                    </p>
+                </div>
+            </div>
+            <div  class="col-lg-6 col-md-12 col-md12">
+                <div class="who-are-we">
+                    <img src="images/my_courier_logo.png" alt="company logo" id="home_logo"/>
+                </div>
+            </div>
+            <div class="services">
+                <header class="section-name">Services</header>
+                <span class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="service">
+                        <header class="service-header">Door 2 Door</header>
+                        <p>
+                            Place your order online for door-to-door parcel collection and delivery services and have your items
+                            picked up and delivered directly to you. Book simple and fast deliveries with My Courier. We offer
+                            worldwide door-to-door shipping services with the best rates on the market.
+                            <img src="images/boxes_service_1.jpg" alt="handing out the packages"/>
+                        </p>
+                    </div>
+                </span>
+                <span class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="service">
+                        <header class="service-header">Point 2 Door</header>
+                        <p>
+                            My Courier service points serve as drop-off and pick-up points for your parcels. This is history in
+                            the making everyone! My Courier, our popular low-cost courier service is now offering a
+                            point-to-door feature. This means that your parcel can now go directly to your customer’s
+                            doorstep from your drop-off point.
+                            <img src="images/boxes_service_2.jpg" alt="filling out a form"/>
+                        </p>
+                    </div>
+                </span>
+                <span class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="service">
+                        <header class="service-header">Point 2 Point</header>
+                        <p>
+                            The sender delivers his shipment in an My Courier service point, and the recipient receives
+                            it from the corresponding My Courier destination service point, enjoying a discount up to 20% (My Courier
+                            undertakes the telephone notice of the recipient regarding the arrival of his shipment).
+                            <img src="images/boxes_service_3.jpg" alt="receicing the package"/>
+                        </p>
+                    </div>
+                </span>
+                <span class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="service">
+                        <header class="service-header">Next Day Delivery (Express)</header>
+                        <p>
+                            Next-day delivery has become so popular with buyers and sellers alike, it’s become the new industry standard.
+                            Plus now with My Courier, next-day delivery isn't just possible - it’s affordable too. Thanks to our extensive
+                            selection of expedited delivery options, we’re confident that you’ll find the right next day delivery option
+                            that matches your requirements - as well as your budget – whatever the size of your parcel delivery.
+                            <img src="images/nextdaydelivery.jpg" alt="next day delivery"/>
+                        </p>
+                    </div>
+                </span>
+            </div>
+            <div class="prices">
+                <header class="section-name">Price List</header><br>
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <th>Area Code</th>
+                        <th>Cost (&le;5kg)</th>
+                        <th>Cost (>5kg)</th>
+                        <th>Fee</th>
+                    </tr>
+                    <tr>
+                        <td>10000 - 20000</td>
+                        <td>0.5 &euro; /kg</td>
+                        <td>0.5 &euro; x 5 + 0.3 &euro; for every extra kg above 5kg</td>
+                        <td>0.50 &euro;</td>
+                    </tr>
+                    <tr>
+                        <td>20001 - 30000</td>
+                        <td>0.5 &euro; /kg</td>
+                        <td>0.5 &euro; x 5 + 0.2 &euro; for every extra kg above 5kg</td>
+                        <td>1 &euro;</td>
+                    </tr>
+                    <tr>
+                        <td>30001 - 40000</td>
+                        <td>1 &euro; /kg</td>
+                        <td>1 &euro; x 5 + 0.25 &euro; for every extra kg above 5kg</td>
+                        <td>1.50 &euro;</td>
+                    </tr>
+                    <tr>
+                        <td>40001 - 50000</td>
+                        <td>1.5 &euro; /kg</td>
+                        <td>1.5 &euro; x 5 + 0.2 &euro; for every extra kg above 5kg</td>
+                        <td>2 &euro;</td>
+                    </tr>
+                    <tr>
+                        <td>50001 - 99999</td>
+                        <td>2 &euro; /kg</td>
+                        <td>2 &euro; x 5 + 0.15 &euro; for every extra kg above 5kg</td>
+                        <td>2.50 &euro;</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>   
+</html>

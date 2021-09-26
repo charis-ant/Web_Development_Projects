@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Courier - Contact Us</title>
+        <script src="my_courier_website.js" defer></script>
+        <link rel="stylesheet" href="my_courier_website.css">
+        <style>
+            .background{
+                background-image:  
+                linear-gradient(
+                rgba(231, 222, 216, 0.725), 
+                rgba(231, 222, 216, 0.725)
+                ), 
+                url(images/boxes7.jpg)
+            }
+
+            #where-to-find-us{
+                margin-left: 15px;
+            }
+
+            #where-to-find-us a{
+                margin: 10px;
+                font-size: 18px;
+            }
+
+            #where-to-find-us span{
+                margin: 10px;
+                font-size: 18px;
+                font-style: italic;
+            }
+
+            #where-to-find-us iframe{
+                width:70%;
+                height: 500px;
+                border: none;
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+    <body class="background">
+        <div class="navigation">
+            <a href="my_courier_website_home.html"><img src="images/my_courier_logo2.png" alt="company logo"/></a>
+            <nav>
+                <div class="icon-bar" onclick="Show()">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+                <span id="nav-menu"> 
+                    <a href="my_courier_website_home.html" target="_self" class="nav">HOME</a>
+                    <a href="my_courier_website_our_company.html" target="_self" class="nav">OUR COMPANY</a>
+                    <a href="my_courier_website_calculate_cost.html" target="_self" class="nav">CALCULATE COST</a>
+                    <a href="my_courier_website_blog.html" target="_self" class="nav">BLOG</a>
+                    <a href="my_courier_website_contact_us.html" target="_self" class="nav">CONTACT US</a>
+                </span>
+            </nav>
+        </div>
+        <div class="container">
+            <section>
+                <header class="interface-name">Contact Us</header>
+                <form> 
+                    <label for="fname">First Name<span class="required"> *</span></label>
+                    <input type="text" id="fname" placeholder="Enter your first name">
+                    
+                    <label for="lname">Last Name<span class="required"> *</span></label>
+                    <input type="text" id="lname" placeholder="Enter your last name">
+                    
+                    <label for="email">Email<span class="required"> *</span></label>
+                    <input type="text" id="email" placeholder="Enter your email address">
+                    
+                    <label for="subj">Subject<span class="required"> *</span></label>
+                    <input type="text" id="subj" placeholder="Enter the subject">
+                    
+                    <label for="msg">Your Message<span class="required"> *</span></label>
+                    <input type="text" id="msg" placeholder="Enter your message here...">
+                    
+                    <button type="button" onclick="submit_function()">Submit</button>
+                    <p><span class="required">*</span>Required field</p>
+                </form><br>
+                <script>
+                        function submit_function(){
+                            var first_name = document.getElementById("fname");
+                            var last_name = document.getElementById("lname");
+                            var email = document.getElementById("email");
+                            var subject = document.getElementById("subj");
+                            var message = document.getElementById("msg");
+
+                            if ((first_name.value.length == 0) || (last_name.value.length == 0) || (email.value.length == 0) || (subject.value.length == 0) || (message.value.lenght == 0)){
+                                return alert("Please fill all the required fields");
+                            }
+                        }
+                </script>
+            </section>
+            <section id="where-to-find-us">
+                <header class="section-name">Where to find us:</header>
+                <a href="tel:+30210 4142000">Telephone</a>
+                <a href="mailto:harisantoniadi@gmail.com">Email</a><br><br>
+                <span>Address: Karaoli & Dimitriou 80, Piraeus 185 34</span><br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3357.7742924258946!2d23.65157031096645!3d37.94174479218577!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bbe5bb8515a1%3A0x3e0dce8e58812705!2zzqDOsc69zrXPgM65z4PPhM6uzrzOuc6_IM6gzrXOuc-BzrHOuc-Oz4I!5e0!3m2!1sel!2sgr!4v1619643122468!5m2!1sel!2sgr" title="My Courier address map" allowfullscreen="" loading="lazy"></iframe>
+            </section>
+        </div>
+    </body>
+</html>

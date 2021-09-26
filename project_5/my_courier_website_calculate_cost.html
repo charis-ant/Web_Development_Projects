@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Courier - Calculate Cost</title>
+        <script src="my_courier_website.js" defer></script>
+        <link rel="stylesheet" href="my_courier_website.css">
+        <style>
+            .background{
+                background-image:  
+                linear-gradient(
+                rgba(231, 222, 216, 0.562), 
+                rgba(231, 222, 216, 0.562)
+                ), 
+                url(images/box.jpg)
+            }
+
+            #text{
+                font-size: 18px;
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+    <body class="background">
+        <div class="navigation">
+            <a href="my_courier_website_home.html"><img src="images/my_courier_logo2.png" alt="company logo"/></a>
+            <nav>
+                <div class="icon-bar" onclick="Show()">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+                <span id="nav-menu"> 
+                    <a href="my_courier_website_home.html" target="_self" class="nav">HOME</a>
+                    <a href="my_courier_website_our_company.html" target="_self" class="nav">OUR COMPANY</a>
+                    <a href="my_courier_website_calculate_cost.html" target="_self" class="nav">CALCULATE COST</a>
+                    <a href="my_courier_website_blog.html" target="_self" class="nav">BLOG</a>
+                    <a href="my_courier_website_contact_us.html" target="_self" class="nav">CONTACT US</a>
+                </span>
+            </nav>
+        </div>
+        <div class="container">
+            <header class="interface-name">Calculate Cost</header>
+            <span id="text">Fill the fields bellow to calculate the shipping cost</span>
+            <form>
+                <label for="ac">Area Code<span class="required"> *</span></label><br>
+                <input type="text" id="ac" required="required" placeholder="Enter the area code"><br>
+                
+                <label for="weight">Package Weight (kg)<span class="required"> *</span></label><br>
+                <input type="text" id="weight" required="required" placeholder="Enter the package weight"><br>
+                
+                <p><button type="button" onclick="calculator_function()">Calculate</button></p>
+                <p><span class="required">*</span>Required field</p>
+                <p id="output"></p>
+            </form>
+            <script>
+                function calculator_function(){
+                    var area_code = document.getElementById("ac");
+                    var weight = document.getElementById("weight");
+                    var cost;  
+
+                    if ((area_code.value.length != 0) && (weight.value.length != 0)){
+                        if ((area_code.value < 10000) || (area_code.value > 99999)){
+                            return alert("Not Valid Area Code");
+                        }
+                        if (weight.value <= 0){
+                            return alert("Not Valid Weight");
+                        }
+                        else if ((area_code.value >= 1000) && (area_code.value <=99999)){
+                            if ((area_code.value >= 10000) && (area_code.value <= 20000)){
+                                if (weight.value <= 5){
+                                    cost = 0.5 + 0.5 * weight.value;
+                                }else{
+                                    cost = 0.5 + 0.5 * 5 + 0.3 * (weight.value - 5);
+                                }
+                            }else if ((area_code.value >= 20001) && (area_code.value <= 30000)){
+                                if (weight.value <= 5){
+                                    cost = 1 + 0.5 * weight.value;
+                                }else{
+                                    cost = 1 + 0.5 * 5 + 0.2 * (weight.value - 5);
+                                }
+                            }else if ((area_code.value >= 30001) && (area_code.value <= 40000)){
+                                if (weight.value <= 5){
+                                    cost = 1.5 + 1 * weight.value;
+                                }else{
+                                    cost = 1.5 + 1 * 5 + 0.25 * (weight.value - 5);
+                                }
+                            }else if ((area_code.value >= 40001) && (area_code.value <= 50000)){
+                                if (weight.value <= 5){
+                                    cost = 2 + 1.5 * weight.value;
+                                }else{
+                                    cost = 2 + 1.5 * 5 + 0.2 * (weight.value - 5);
+                                }
+                            }else if ((area_code.value >= 50001) && (area_code.value <= 99999)){
+                                if (weight.value <= 5){
+                                    cost = 2.5 + 2 * weight.value;
+                                }else{
+                                    cost = 2.5 + 2 * 5 + 0.15 * (weight.value - 5);
+                                }
+                            }  
+                        }
+                        
+                        document.getElementById("output").innerHTML = "<h3>Shipping cost is: " + cost + "&euro;</h3>";       
+                    } 
+                    else{
+                        return alert("Please fill all the required fields");
+                    }    
+                }
+            </script>
+        </div>
+    </body>
+</html>

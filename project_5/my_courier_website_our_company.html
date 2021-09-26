@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Courier - Our Company</title>
+        <script src="my_courier_website.js" defer></script>
+        <link rel="stylesheet" href="my_courier_website.css">
+        <style>
+            .background{
+                background-image:  
+                linear-gradient(
+                rgba(231, 222, 216, 0.562), 
+                rgba(231, 222, 216, 0.562)
+                ), 
+                url(images/boxes6.jpg)
+            }
+
+            .about-us{
+                margin-left: 15px;
+            }
+
+            video{
+                width: 90%;
+            }
+
+            .about-us p{
+                text-align: justify;
+                width: 90%;
+            }
+
+            @media (max-width: 767px){
+                video::-webkit-media-controls {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body class="background">
+        <div class="navigation">
+            <a href="my_courier_website_home.html"><img src="images/my_courier_logo2.png" alt="company logo"/></a>
+            <nav>
+                <div class="icon-bar" onclick="Show()">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+                <span id="nav-menu"> 
+                    <a href="my_courier_website_home.html" target="_self" class="nav">HOME</a>
+                    <a href="my_courier_website_our_company.html" target="_self" class="nav">OUR COMPANY</a>
+                    <a href="my_courier_website_calculate_cost.html" target="_self" class="nav">CALCULATE COST</a>
+                    <a href="my_courier_website_blog.html" target="_self" class="nav">BLOG</a>
+                    <a href="my_courier_website_contact_us.html" target="_self" class="nav">CONTACT US</a>
+                </span>
+            </nav>
+        </div>
+        <div class="container">
+            <header class="interface-name">Our Company</header>
+            <header class="section-name">About Us</header>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="about-us">
+                    <video controls autoplay muted>
+                        <source src="images/our_company.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="about-us">
+                    <p>
+                        My Courier is considered as one of the most reliable companies in the Courier Services and is amongst the largest Greek courier companies.
+                        All shipment are delivered by privately owned means of transport. We provide the ability to the sender to keep track of his shipment.
+                        We have already installed ERP system which allows us to monitor the company’s vehicles in real time with the primary purpose of improving
+                        our services. Soon we will offer through this system further information on mobile phone, or mails about the exact time of delivery.
+                        We also provide the ability of tracking down all shipments on our website.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

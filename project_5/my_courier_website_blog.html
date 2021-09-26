@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Courier - Blog</title>
+        <script src="my_courier_website.js" defer></script>
+        <link rel="stylesheet" href="my_courier_website.css">
+        <style>
+            .background{
+                background-image:  
+                linear-gradient(
+                rgba(231, 222, 216, 0.562), 
+                rgba(231, 222, 216, 0.562)
+                ), 
+                url(images/boxes1.jpg)
+            }
+
+            @media (min-width:768px) and (max-width:991px){
+                .article-clear{
+                clear: both;
+                }
+            } 
+
+            article{
+                margin: 15px;
+            }
+
+            .reviews{
+                padding: 10px;
+            }
+
+            .reviews img{
+                display: block;
+                align-items: center;
+                margin-left: auto;
+                margin-right: auto;
+                width: 70%;
+            }
+
+            #review1_h{
+                padding: 10px;
+                margin-bottom: -10px;
+                text-align: center;
+                font-weight: bold;
+                border: 2px solid rgb(159, 92, 221);
+                background-color: rgba(159, 92, 221, 0.466);
+            }
+
+            #review1{
+                text-align: justify;
+                margin-bottom: 30px;
+                border: 2px solid rgb(159, 92, 221);
+                background-color: rgba(159, 92, 221, 0.466);
+            }
+
+            #review2_h{
+                padding: 10px;
+                margin-bottom: -10px;
+                text-align: center;
+                font-weight: bold;
+                border: 2px solid rgb(218, 129, 191);
+                background-color: rgba(218, 129, 191, 0.466);
+            }
+
+            #review2{
+                text-align: justify;
+                margin-bottom: 30px;
+                border: 2px solid rgb(218, 129, 191);
+                background-color: rgba(218, 129, 191, 0.466);
+            }
+
+            #review3_h{
+                padding: 10px;
+                margin-bottom: -10px;
+                text-align: center;
+                font-weight: bold;
+                border: 2px solid rgba(130, 214, 172);
+                background-color: rgba(130, 214, 172, 0.466);
+            }
+
+            #review3{
+                text-align: justify;
+                margin-bottom: 30px;
+                border: 2px solid rgba(130, 214, 172);
+                background-color: rgba(130, 214, 172, 0.466);
+            }
+
+            #review4_h{
+                padding: 10px;
+                margin-bottom: -10px;
+                text-align: center;
+                font-weight: bold;
+                border: 2px solid rgb(231, 218, 142);
+                background-color: rgba(231, 218, 142, 0.466);
+            }
+
+            #review4{
+                text-align: justify;
+                margin-bottom: 30px;
+                border: 2px solid rgb(231, 218, 142);
+                background-color: rgba(231, 218, 142, 0.466);
+            }
+        </style>
+    </head>
+    <body class="background">
+        <div class="navigation">
+            <a href="my_courier_website_home.html"><img src="images/my_courier_logo2.png" alt="company logo"/></a>
+            <nav>
+                <div class="icon-bar" onclick="Show()">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+                <span id="nav-menu"> 
+                    <a href="my_courier_website_home.html" target="_self" class="nav">HOME</a>
+                    <a href="my_courier_website_our_company.html" target="_self" class="nav">OUR COMPANY</a>
+                    <a href="my_courier_website_calculate_cost.html" target="_self" class="nav">CALCULATE COST</a>
+                    <a href="my_courier_website_blog.html" target="_self" class="nav">BLOG</a>
+                    <a href="my_courier_website_contact_us.html" target="_self" class="nav">CONTACT US</a>
+                </span>
+            </nav>
+        </div>
+        <script>
+            var navMenu = document.getElementById("nav-menu");
+            function Show() {
+            navMenu.classList.add("_Menus-show");
+            }
+        </script>
+        <div class="container">
+            <header class="interface-name">Blog</header>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <article>
+                    <header id="review1_h">Highly recommended!!!</header>
+                    <p class="reviews" id="review1">
+                        I have use My Courier regularly for over 2 years to send parcels
+                        within the UK and around the world, particularly to the USA.
+                        Pricing is very competitive and have never had any problems.
+                        Each parcel sent with our next day delivery service is fully tracked,
+                        so that you can check the progress of your items through to delivery  
+                        My Courier has been our courier partner for two years now and
+                        their service level is first class.
+                        <img src="images/five_star.gif" alt="five start gif image"/>
+                    </p>
+                </article>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <article>
+                    <header id="review2_h">No more lugging parcels to the Post Office</header>
+                    <p class="reviews" id="review2">
+                        Great service, sensibly priced. My Courier is my first choice when sending a parcel these days.
+                        It has a wide range of fully-tracked couriers. Optional insurance
+                        is available for those valuable packages, and unless you're sending something mega-expensive,
+                        the premium is really quite modest, and increments based on the value.
+                        Never had a problem with them and would most likely recommend.
+                        <img src="images/thumps_up.gif" alt="thumps up image"/>
+                    </p>
+                </article>
+            </div>
+            <div class="article-clear">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <article>
+                        <header id="review3_h">Dont Sent your parcel through My Courier!</header>
+                        <p class="reviews" id="review3">
+                            HI all,<br>
+                            I sent a package from India to Bangladesh. They picked my parcel and they sent it
+                            to Mumbai India, they also charged money for 1 KG and they didn't inform me about the customs
+                            clearance process. They sent my parcel to Bangladesh through FedEx and after two days I'm hearing
+                            from FedEx that I have to pay 5k for clearance. I tried on calling My Courier but they
+                            blocked my Email and the my calls also. FedEx informed me that they didn't
+                            pay any money so the receiver had to pay. Beware guys. 
+                            Dont sent anything from My Courier, your parcel will not be in safe hands.
+                            <img src="images/one_star.gif" alt="angry imoji image"/>
+                        </p>
+                    </article>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <article>
+                        <header id="review4_h">The package reached in time...</header>
+                        <p class="reviews" id="review4">
+                            I have used My Courier a couple of times before, their service was okay. I don't know what went wrong this time.
+                            The package reached in time, but it was tampered and opened before it reached Dublin and
+                            two branded tea-bags packages were removed. No one informed the recipient the reason for it.
+                            I had packed everything as per My Courier list of Do's and Donts.
+                            I expected a full door-to-door service when i signed up.
+                            I have been following up but I don't get any updates from My Courier.
+                            It makes me feel as though you are not interested in addressing my problem. 
+                            <img src="images/thinking.gif" alt="straight face imoji"/>
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
