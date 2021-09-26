@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Synedrio - Calculate Cost</title>
+        <script src="my_event_website.js" defer></script>
+        <link rel="stylesheet" href="my_event_website.css">
+        <style>
+            #text{
+                margin-top: 20px;
+                font-size: 18px;
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navigation">
+            <a href="my_event_website_home.html"><img src="images/synedrio_logo2.png" alt="company logo"/></a>
+            <nav>
+                <div class="icon-bar" onclick="Show()">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+                <span id="nav-menu"> 
+                    <a href="my_event_website_home.html" target="_self">HOME</a>
+                    <a href="my_event_website_company.html" target="_self">COMPANY</a>
+                    <a href="my_event_website_calculate_cost.html" target="_self">CALCULATE COST</a>
+                    <a href="my_event_website_contact.html" target="_self">CONTACT</a>
+                    <a href="my_event_website_newsletter.html" target="_self">NEWSLETTER</a>
+                </span>
+            </nav>
+        </div>
+        <div class="container">
+            <header class="interface-name">Calculate Cost</header>
+            <div id="text">Fill the fields bellow to calculate the conference organization cost</div>
+            <form>
+                <label for="duration">Conference duration<span class="required"> *</span></label><br>
+                <input type="text" id="duration" required="required" placeholder="How many days will the conference last?"><br>
+                
+                <label for="attendees">Number of attendees<span class="required"> *</span></label><br>
+                <input type="text" id="attendees" required="required" placeholder="How many people are attending the conference?"><br>
+                
+                <label for="staff">Number of staff members<span class="required"> *</span></label><br>
+                <input type="text" id="staff" required="required" placeholder="How many staff members you will need?"><br>
+
+                <p><button class="form-button" type="button" onclick="calculator_function()">Calculate</button></p>
+                <p><span class="required">*</span>Required field</p>
+                <p id="output"></p>
+            </form>
+            <script>
+                function calculator_function(){
+                    var duration = document.getElementById("duration");
+                    var attendees = document.getElementById("attendees");
+                    var staff = document.getElementById("staff");
+                    var cost;  
+
+                    if ((duration.value.length != 0) && (attendees.value.length != 0) && (staff.value.length != 0)){
+                        if (duration.value <= 0){
+                            return alert("Not Valid field value (Conference duration)");
+                        }
+                        if (attendees.value <= 0){
+                            return alert("Not Valid field value (Number of attendees)");
+                        }
+                        if (staff.value < 0){
+                            return alert("Not Valid field value (Number of staff members)");
+                        }
+                        
+                        if (attendees.value <= 500){
+                            cost = duration.value * 8 * staff.value * 10 + duration.value * 500 + attendees.value * 0.5;
+                        }else if ((attendees.value >= 501) && (attendees.value <= 1000)){
+                            cost = duration.value * 8 * staff.value * 8 + duration.value * 400 + attendees.value * 0.4;
+                        }else if ((attendees.value >= 1001) && (attendees.value <= 1500)){
+                            cost = duration.value * 8 * staff.value * 6 + duration.value * 300 + attendees.value * 0.3;
+                        }else if ((attendees.value >= 1501) && (attendees.value <= 2000)){
+                            cost = duration.value * 8 * staff.value * 5 + duration.value * 200 + attendees.value * 0.2;
+                        }else if (attendees.value > 2000){
+                            cost = duration.value * 8 * staff.value * 4 + duration.value * 150 + attendees.value * 0.15;
+                        } 
+                        
+                        document.getElementById("output").innerHTML = "<h3>Event cost is: " + cost + "&euro;</h3>";       
+                    } 
+                    else{
+                        return alert("Please fill all the required fields");
+                    }    
+                }
+            </script>
+        </div>
+        <footer>
+            <button class="button-footer">
+                <a href="my_event_website_users.php" target="_self">Subscribed Users</a>
+            </button>
+        </footer>
+    </body>
+</html>

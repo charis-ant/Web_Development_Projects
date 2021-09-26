@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Synedrio - Home</title>
+        <script src="my_event_website.js" defer></script>
+        <link rel="stylesheet" href="my_event_website.css">
+        <style>
+            #synedrio-logo{
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                align-items: center;
+            }
+
+            .who-are-we{
+                margin-left: 15px;
+            }
+
+            video{
+                width: 90%;
+                margin-bottom: 30px;
+            }
+
+            .who-are-we p{
+                text-align: justify;
+                width: 90%;
+            }
+
+            .service{
+                margin: 15px;
+            }
+
+            .service-p{
+                padding: 10px;
+            }
+
+            .service-p img{
+                display: block;
+                align-items: center;
+                margin-left: auto;
+                margin-right: auto;
+                width: 70%;
+                margin-top: 5px;
+                border: 2px solid #848096;
+            }
+
+            .service-header{
+                padding: 10px;
+                margin-bottom: -10px;
+                text-align: center;
+                font-weight: bold;
+                border: 2px solid #848096;
+                background-color: #9b98a9;
+            }
+
+            .service-p{
+                text-align: justify;
+                margin-bottom: 30px;
+                border: 2px solid #848096;
+                background-color: #9b98a9;
+            }
+
+            .gallery img{
+                align-items: center;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 40px;
+                margin-top: 40px;
+                display: block;
+                opacity: 0.6;
+            }
+
+            #gallery2{
+                clear: both;
+            }
+
+            @media (min-width:768px) and (max-width:1080px){
+                #gallery3{
+                    clear: both;
+                }
+                .img-descr{
+                    clear: both;
+                }
+            }
+
+            .gallery img:hover{
+                opacity: 1;
+                margin-bottom: 0;
+            }
+
+            .img-descr{
+                display: none;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: white;
+                background-color: #AD99C6;
+                padding: 5px;
+                text-align: center;
+                align-items: center;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                clear: both;
+            }
+
+            .gallery img:hover + div{
+                display: block;
+            }
+
+            footer{
+                position:relative;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navigation">
+            <a href="my_event_website_home.html"><img src="images/synedrio_logo2.png" alt="company logo"/></a>
+            <nav>
+                <div class="icon-bar" onclick="Show()">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+                <span id="nav-menu"> 
+                    <a href="my_event_website_home.html" target="_self">HOME</a>
+                    <a href="my_event_website_company.html" target="_self">COMPANY</a>
+                    <a href="my_event_website_calculate_cost.html" target="_self">CALCULATE COST</a>
+                    <a href="my_event_website_contact.html" target="_self">CONTACT</a>
+                    <a href="my_event_website_newsletter.html" target="_self">NEWSLETTER</a>
+                </span>
+            </nav>
+        </div>
+        <div class="container">
+            <img id="synedrio-logo" src="images/synedrio_logo.jpg" alt="synedrio logo"/>
+            <header class="interface-name">Home</header>
+            <header class="section-name">Who Are We?</header>
+            <div  class="col-lg-6 col-md-12 col-md12">
+                <div class="who-are-we">
+                    <p>
+                        Meeting Professionals International (MPI) is the largest meeting and event industry association worldwide. The organization provides innovative and relevant education, networking opportunities and business exchanges, and acts as a prominent voice for the promotion and growth of the industry. MPI has a global community of 60,000 meeting and event professionals including nearly 14,000 engaged members. It has It has nearly 70 chapters, clubs and members in more than 75 countries worldwide. "When we meet, we change the world."
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="who-are-we">
+                    <video controls loop autoplay muted>
+                        <source src="images/who_are_we.mp4" type="video/mp4"/>
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
+            </div>
+            <div>
+                <header class="section-name">Services</header>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="service">
+                        <header class="service-header">Sound Equipment Leasing</header>
+                        <p class="service-p">
+                            You can lease just about any type of audio equipment you need, including mixing consoles, speakers, sounds boards, wireless microphones, editing software, amplifiers, headphones, headsets and much more. Choose among all the major brands.
+                            <img src="images/sound.jpg" alt="sound equipment"/>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="service">
+                        <header class="service-header">Lighting Equipment Leasing</header>
+                        <p class="service-p">
+                            The financial benefits to installing LED lighting are well known, but a lessor known fact is that you can lease LED light bulbs. One of the key reasons why so many organisations have still not converted from incandescent, halogen or compact fluorescent lamps is the high cost of installing LED lighting. A typical 50w halogen replacement LED will use 7w of electricity for the same light output, a saving 86% in running costs.
+                            <img src="images/lighting.jpg" alt="lighting equipment"/>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="service">
+                        <header class="service-header">Catering</header>
+                        <p class="service-p">
+                            Lend your event that unique and special touch and leave your guests with delightful memories: with a catering by Samses. Just get in touch with us – we&rsquo;ll be happy to arrange individual catering options according to your wishes. Entirely vegetarian or vegan, of course.
+                            <img src="images/catering.jpg" alt="catering"/>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="service">
+                        <header class="service-header">Staffing</header>
+                        <p class="service-p">
+                            When searching for a staffing agency its ideal to find one that fits the type of roles you’re recruiting for.
+                            You shouldn&rsquo;t engage an engineering staffing agency to find an accountant just as you would not contact an accounting recruiter to find you a software developer. That&rsquo;s why &ldquo;Synedrio&rdquo; staffing services are the best for you.
+                            <img src="images/staffing.png" alt="staffing"/>
+                        </p>
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="c-t-a">
+                        <a target="_blank" href="my_event_website_company.html">Visit the Company page</a>
+                    </button>
+                </div>
+            </div>
+            <div class="gallery">
+                <header class="section-name">Image Gallery</header>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <img src="images/conference1.jpg" alt="conference"/>
+                    <div class="img-descr">Conference</div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <img src="images/conference2.jpg" alt="conference"/>
+                    <div class="img-descr">Conference</div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <img src="images/conference3.jpg" alt="conference"/>
+                    <div class="img-descr">Conference</div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <img src="images/conference4.jpg" alt="conference"/>
+                    <div class="img-descr">Conference</div>
+                </div>
+                <div id="gallery2">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <img src="images/conference5.jpg" alt="conference"/>
+                        <div class="img-descr">Conference</div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <img src="images/conference6.jpg" alt="conference"/>
+                        <div class="img-descr">Conference</div>
+                    </div>
+                </div>
+                <div id="gallery3">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <img src="images/conference7.jpeg" alt="conference"/>
+                        <div class="img-descr">Conference</div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <img src="images/conference8.jpg" alt="conference"/>
+                        <div class="img-descr">Conference</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <button class="button-footer">
+                <a href="my_event_website_users.php" target="_self">Subscribed Users</a>
+            </button>
+        </footer>
+    </body>   
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Synedrio - Contact Us</title>
+        <script src="my_event_website.js" defer></script>
+        <link rel="stylesheet" href="my_event_website.css">
+        <style>
+            #where-to-find-us{
+                margin: auto;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                text-align: center;
+            }
+
+            #where-to-find-us iframe{
+                width:70%;
+                height: 500px;
+                border: none;
+                margin: auto;
+                align-items: center;
+                justify-content: center;
+            }
+
+            footer{
+                position:relative;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navigation">
+            <a href="my_event_website_home.html"><img src="images/synedrio_logo2.png" alt="company logo"/></a>
+            <nav>
+                <div class="icon-bar" onclick="Show()">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+                <span id="nav-menu"> 
+                    <a href="my_event_website_home.html" target="_self">HOME</a>
+                    <a href="my_event_website_company.html" target="_self">COMPANY</a>
+                    <a href="my_event_website_calculate_cost.html" target="_self">CALCULATE COST</a>
+                    <a href="my_event_website_contact.html" target="_self">CONTACT</a>
+                    <a href="my_event_website_newsletter.html" target="_self">NEWSLETTER</a>
+                </span>
+            </nav>
+        </div>
+        <div class="container">
+            <section>
+                <header class="interface-name">Contact Us</header>
+                <form action="my_event_website_contact_form.php" method="POST"> 
+                    <label for="name">Name<span class="required"> *</span></label>
+                    <input type="text" id="name" name="name" required="required" placeholder="Enter your full name">
+                    
+                    <label for="email">Email<span class="required"> *</span></label>
+                    <input type="text" id="email" name="email" required="required" placeholder="Enter your email address">
+                    
+                    <label for="subject">Subject<span class="required"> *</span></label>
+                    <input type="text" id="subject" name="subject" required="required" placeholder="Enter the subject">
+                    
+                    <label for="message">Your Message<span class="required"> *</span></label>
+                    <input type="text" id="message" name="message" required="required" placeholder="Enter your message here...">
+                    
+                    <button class="form-button" onclick="submit_function()">Submit</button>
+                    <p><span class="required">*</span>Required field</p>
+                </form><br>
+                <script>
+                        function submit_function(){
+                            var name = document.getElementById("name");
+                            var email = document.getElementById("email");
+                            var subject = document.getElementById("subject");
+                            var message = document.getElementById("message");
+
+                            if ((name.value.length == 0) || (email.value.length == 0) || (subject.value.length == 0) || (message.value.length == 0)){
+                                return alert("Please fill all the required fields");
+                            }
+                        }
+                </script>
+            </section>
+            <section id="where-to-find-us">
+                <header class="section-name">Where to find us:</header>
+                <div><a href="tel:+30210 4142000">Telephone</a></div>
+                <div><a href="mailto:harisantoniadi@gmail.com">Email</a></div>
+                <div>Address: Karaoli & Dimitriou 80, Piraeus 185 34</div><br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3357.7742924258946!2d23.65157031096645!3d37.94174479218577!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bbe5bb8515a1%3A0x3e0dce8e58812705!2zzqDOsc69zrXPgM65z4PPhM6uzrzOuc6_IM6gzrXOuc-BzrHOuc-Oz4I!5e0!3m2!1sel!2sgr!4v1619643122468!5m2!1sel!2sgr" title="My Courier address map" allowfullscreen="" loading="lazy"></iframe>
+            </section>
+        </div>
+        <footer>
+            <button class="button-footer">
+                <a href="my_event_website_users.php" target="_self">Subscribed Users</a>
+            </button>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Synedrio - Newsletter</title>
+        <script src="my_event_website.js" defer></script>
+        <link rel="stylesheet" href="my_event_website.css">
+        <style>
+            #where-to-find-us{
+                margin-left: 15px;
+            }
+
+            #where-to-find-us a{
+                margin: 10px;
+                font-size: 18px;
+            }
+
+            #where-to-find-us span{
+                margin: 10px;
+                font-size: 18px;
+                font-style: italic;
+            }
+
+            #where-to-find-us iframe{
+                width:70%;
+                height: 500px;
+                border: none;
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navigation">
+            <a href="my_event_website_home.html"><img src="images/synedrio_logo2.png" alt="company logo"/></a>
+            <nav>
+                <div class="icon-bar" onclick="Show()">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+                <span id="nav-menu"> 
+                    <a href="my_event_website_home.html" target="_self">HOME</a>
+                    <a href="my_event_website_company.html" target="_self">COMPANY</a>
+                    <a href="my_event_website_calculate_cost.html" target="_self">CALCULATE COST</a>
+                    <a href="my_event_website_contact.html" target="_self">CONTACT</a>
+                    <a href="my_event_website_newsletter.html" target="_self">NEWSLETTER</a>
+                </span>
+            </nav>
+        </div>
+        <div class="container">
+            <section>
+                <header class="interface-name">Subscribe to our Newsletter</header>
+                <form method="POST" action="my_evet_website_newsletter_form.php"> 
+                    <label for="username">Username<span class="required"> *</span></label>
+                    <input type="text" id="username" name="username" required="required" placeholder="Please enter a username">
+
+                    <label for="name">Name<span class="required"> *</span></label>
+                    <input type="text" id="name" name="name" required="required" placeholder="Please enter your name">
+                    
+                    <label for="email">Email<span class="required"> *</span></label>
+                    <input type="text" id="email" name="email" required="required" placeholder="Please enter an email address">
+                    
+                    <button class="form-button" onclick="submit_function()">Submit</button>
+                    <p><span class="required">*</span>Required field</p>
+                </form><br>
+                <script>
+                        function submit_function(){
+                            var username = document.getElementById("username");
+                            var name = document.getElementById("name");
+                            var email = document.getElementById("email");
+
+                            if ((username.value.length == 0) || (name.value.length == 0) || (email.value.length == 0)){
+                                return alert("Please fill all the required fields");
+                            }
+                        }
+                </script>
+            </section>
+        </div>
+        <footer>
+            <button class="button-footer">
+                <a href="my_event_website_users.php" target="_self">Subscribed Users</a>
+            </button>
+        </footer>
+    </body>
+</html>
